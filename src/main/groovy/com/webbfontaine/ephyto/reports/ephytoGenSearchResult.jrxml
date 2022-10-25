@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ephytoGenSearchResult" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="804" leftMargin="19" rightMargin="19" topMargin="19" bottomMargin="19" uuid="84cc90f8-8b4c-4724-8a8c-076d8dbdfc63">
+	<property name="ireport.zoom" value="1.815000000000092"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="dateFormat" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="langage" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="exporterCode" class="java.lang.String"/>
+	<field name="declarantCode" class="java.lang.String"/>
+	<field name="requestDate" class="org.joda.time.LocalDate"/>
+	<field name="dockingPermissionRef" class="java.lang.String"/>
+	<field name="dockingPermissionDate" class="org.joda.time.LocalDate"/>
+	<field name="phytosanitaryCertificateRef" class="java.lang.String"/>
+	<field name="phytosanitaryCertificateDate" class="org.joda.time.LocalDate"/>
+	<field name="userReference" class="java.lang.String"/>
+	<field name="requestNumber" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="219" y="3" width="355" height="30" forecolor="#404041" backcolor="#E2E2E4" uuid="3b6e635d-e379-4548-a0a5-4e5f5bc5f4de"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.ephytoGen.title.label}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="40">
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="0" y="0" width="47" height="40" forecolor="#000000" backcolor="#E2E2E3" uuid="1264adfc-f004-402a-85f0-12196e6943e1">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.status.label}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="300" y="0" width="105" height="40" forecolor="#000000" backcolor="#E2E2E3" uuid="0a607cb7-e618-4d76-b437-16e2f818a215">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.ephytoGen.declarantCode.label}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="405" y="0" width="99" height="40" forecolor="#000000" backcolor="#E2E2E3" uuid="5896b1f2-5c65-4854-9500-4aa74a05ed57">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.ephytoGen.dockingPermissionRef.label}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="504" y="0" width="71" height="40" forecolor="#000000" backcolor="#E2E2E3" uuid="5896b1f2-5c65-4854-9500-4aa74a05ed57">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.ephytoGen.dockingPermissionDate.label}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="575" y="0" width="94" height="40" forecolor="#000000" backcolor="#E2E2E3" uuid="5896b1f2-5c65-4854-9500-4aa74a05ed57">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.ephytoGen.phytosanitaryCertificateRef.label}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="734" y="0" width="70" height="40" forecolor="#000000" backcolor="#E2E2E3" uuid="5896b1f2-5c65-4854-9500-4aa74a05ed57">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.ephytoGen.userReference.label}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="47" y="0" width="94" height="40" forecolor="#000000" backcolor="#E2E2E3" uuid="1264adfc-f004-402a-85f0-12196e6943e1">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.ephytoGen.requestNumber.label}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="141" y="0" width="75" height="40" forecolor="#000000" backcolor="#E2E2E3" uuid="16b239f9-f1f6-4462-81b9-a4a4c6afb359">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.ephytoGen.requestDate.label}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="216" y="0" width="84" height="40" forecolor="#000000" backcolor="#E2E2E3" uuid="d8bc6fa7-53b8-4e7a-b308-bff938d2af95">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.ephytoGen.exporterCode.type.label}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="669" y="0" width="65" height="40" forecolor="#000000" backcolor="#E2E2E3" uuid="12c3e510-d538-43a3-9aed-499f8208f10b">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{printout.ephytoGen.phytosanitaryCertificateDate.label}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="47" height="20" uuid="a3548806-f5b1-4c00-8ad3-424e9ab4844e"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="47" y="0" width="94" height="20" uuid="e02fe38b-4547-41ea-9153-e97fb2a6ac79"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{requestNumber}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="405" y="0" width="99" height="20" forecolor="#404041" uuid="4f696fd1-442b-4e20-b3b6-194e68b1d199"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dockingPermissionRef}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="734" y="0" width="70" height="20" uuid="2756d6f2-0a07-4a97-b975-5092103063a7"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userReference}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="216" y="0" width="84" height="20" uuid="f6dc2a80-cea0-4979-b9c7-79d7ad39b7ae"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{exporterCode}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="141" y="0" width="75" height="20" uuid="1fa3f64f-7793-494e-8c26-cb0f5afed487"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{requestDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="300" y="0" width="105" height="20" uuid="65eb2cfc-3f6e-4133-ad4a-801aeff76824"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{declarantCode}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="504" y="0" width="71" height="20" uuid="af956828-c3fa-4f67-b0b3-0581cb700624"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dockingPermissionDate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="575" y="0" width="94" height="20" uuid="9fe76a51-0fc7-4bd5-bb2c-3372ed866490"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phytosanitaryCertificateRef}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="669" y="0" width="65" height="20" uuid="7350a50b-fe97-4f89-a349-54d5b8785a37"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.25" lineColor="#6D6E70"/>
+					<topPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<leftPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<bottomPen lineWidth="0.25" lineColor="#6D6E70"/>
+					<rightPen lineWidth="0.25" lineColor="#6D6E70"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phytosanitaryCertificateDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="658" y="10" width="60" height="20" uuid="f03d7c21-ed51-4fce-b9b2-3aeedaaab259"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" /"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="718" y="10" width="40" height="20" uuid="5f216543-e54c-422c-9102-2b567617a644"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

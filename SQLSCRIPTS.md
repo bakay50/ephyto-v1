@@ -1,0 +1,71 @@
+# **Guce EPHYTO SQL Scripts**
+## release/3.3.3 
+
+### CIV-1781 [PHYTO] Increase maxlength of Batch Number and Sub-Batch Number
+
+    ALTER TABLE CERTIFICATE_GOODS MODIFY (BATCH_NBR VARCHAR2(15), SUB_BATCH_NBR VARCHAR(15));
+
+### CIV-1676 [PHYTO] 
+    
+### Update field of all datas Status = 'Valid'  in database 
+    UPDATE RIMM_APL SET STATUS='Valid' 
+
+## release/3.3.3 
+### CIV-1676 [PHYTO] 
+    
+### Rename table RIMM_APL to RIMM_APL_BIS: 
+    ALTER TABLE RIMM_APL RENAME TO RIMM_APL_BIS
+   
+### Create table RIMM_APL:
+    CREATE SEQUENCE id_rimm_apl_seq
+      START WITH 1
+      INCREMENT BY 1;
+  
+    CREATE TABLE "RIMM_APL"(
+            "ID" NUMBER(19,0) NOT NULL,  
+            "AGREEMENT" VARCHAR2(255 CHAR), 
+            "CODE" VARCHAR2(255 CHAR), 
+            "ADDRESS" VARCHAR2(255 CHAR), 
+            "STATUS" VARCHAR2(255 CHAR));
+    				
+    CREATE UNIQUE INDEX "SYS_C0011219" ON "RIMM_APL" ("ID") 
+          ;
+          
+### Insert all datas of the RIMM_APL_BIS to RIMM_APL :
+
+    INSERT INTO RIMM_APL SELECT id_rimm_apl_seq.nextval, CODE, AGREEMENT, ADDRESS, STATUS FROM RIMM_APL_BIS;
+    
+### CIV-1585 [PHYTO] Add new Applicator: IPHYTO
+
+    INSERT INTO "RIMM_APL" (ID, AGREEMENT, CODE, ADDRESS) VALUES ('44', 'A-20-0493', '045', 'IPHYTO') 
+    
+---
+## release/3.3.2 
+### CIV-1069 [PHYTO] Increase size of Botanical name field
+
+    *Update BOT_NAME column size*
+
+    ALTER TABLE CERTIFICATE_GENERAL RENAME COLUMN BOT_NAME TO BOT_NAME_OLD;
+    ALTER TABLE CERTIFICATE_GENERAL ADD BOT_NAME VARCHAR2 (1500 CHAR);
+    UPDATE CERTIFICATE_GENERAL SET BOT_NAME = BOT_NAME_OLD;
+    ALTER TABLE CERTIFICATE_GENERAL DROP COLUMN BOT_NAME_OLD;
+    
+---
+
+## release/3.3.1 
+### SWEPHYCI-360 Add a new Product Code
+
+
+**datasource:**
+    *PHYTO*
+
+    *Insert new Product*
+
+   insert into RIMM_PDT (ID, CODE, NAME, DEF_QTY, DEF_GRS_WGT, DEF_NET_WGT, BOT_NAM) values (7, 'MANGUE', 'MANGUE',NULL,NULL,NULL,NULL);
+     
+    *Update OBS column size*
+
+   ALTER TABLE CERTIFICATE_GENERAL RENAME COLUMN OBS TO OBSBIS;
+   ALTER TABLE CERTIFICATE_GENERAL ADD OBS VARCHAR2(1000);
+   UPDATE CERTIFICATE_GENERAL SET OBS = OBSBIS;
+   ALTER TABLE CERTIFICATE_GENERAL DROP COLUMN OBSBIS;

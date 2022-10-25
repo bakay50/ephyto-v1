@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ephytoGen" language="groovy" pageWidth="600" pageHeight="830" columnWidth="552" leftMargin="24" rightMargin="24" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" isIgnorePagination="true">
+	<property name="ireport.zoom" value="1.363636363636422"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="144"/>
+	<parameter name="ephytoLogo" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="dateFormat" class="java.lang.String">
+		<defaultValueExpression><![CDATA["yyyy-mm-dd"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="GenDateFormat" class="java.lang.String">
+		<defaultValueExpression><![CDATA["dd/MM/yyyy"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="GenDateFormat_en" class="java.lang.String">
+		<defaultValueExpression><![CDATA["yyyy/MM/dd"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="isTemporary" class="java.lang.Boolean"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="requestNumber" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="exporterCode" class="java.lang.String"/>
+	<field name="applicatorCode" class="java.lang.String"/>
+	<field name="declarantCode" class="java.lang.String"/>
+	<field name="requestDate" class="org.joda.time.LocalDate"/>
+	<field name="disinfectionCertificateRef" class="java.lang.String"/>
+	<field name="disinfectionCertificateDate" class="org.joda.time.LocalDate"/>
+	<field name="dockingPermissionRef" class="java.lang.String"/>
+	<field name="dockingPermissionDate" class="org.joda.time.LocalDate"/>
+	<field name="phytosanitaryCertificateRef" class="java.lang.String"/>
+	<field name="phytosanitaryCertificateDate" class="org.joda.time.LocalDate"/>
+	<field name="userReference" class="java.lang.String"/>
+	<field name="exporterName" class="java.lang.String"/>
+	<field name="exporterAddress" class="java.lang.String"/>
+	<field name="consigneeNameAddress" class="java.lang.String"/>
+	<field name="declarantName" class="java.lang.String"/>
+	<field name="declarantAddress" class="java.lang.String"/>
+	<field name="applicantName" class="java.lang.String"/>
+	<field name="applicantTelephone" class="java.lang.String"/>
+	<field name="applicantEmail" class="java.lang.String"/>
+	<field name="dockNumber" class="java.lang.Number"/>
+	<field name="customsClearanceOfficeCode" class="java.lang.String"/>
+	<field name="customsClearanceOfficeName" class="java.lang.String"/>
+	<field name="declarationSerial" class="java.lang.String"/>
+	<field name="modeOfTransportCode" class="java.lang.String"/>
+	<field name="modeOfTransportName" class="java.lang.String"/>
+	<field name="meansOfTransport" class="java.lang.String"/>
+	<field name="countryOfDestinationCode" class="java.lang.String"/>
+	<field name="countryOfDestinationName" class="java.lang.String"/>
+	<field name="nameAndSurnameMinistryAgent" class="java.lang.String"/>
+	<field name="titleMinistryAgent" class="java.lang.String"/>
+	<field name="placeOfUnloadingName" class="java.lang.String"/>
+	<field name="placeOfUnloadingCode" class="java.lang.String"/>
+	<field name="warehouse" class="java.lang.String"/>
+	<field name="applicatorAgreement" class="java.lang.String"/>
+	<field name="applicatorNameAddress" class="java.lang.String"/>
+	<field name="treatmentType" class="java.lang.String"/>
+	<field name="usedProducts" class="java.lang.String"/>
+	<field name="concentration" class="java.lang.String"/>
+	<field name="treatmentSartDate" class="org.joda.time.LocalDate"/>
+	<field name="treatmentEndDate" class="org.joda.time.LocalDate"/>
+	<field name="commodityCode" class="java.lang.String"/>
+	<field name="commodityDescription" class="java.lang.String"/>
+	<field name="productTypeCode" class="java.lang.String"/>
+	<field name="productTypeName" class="java.lang.String"/>
+	<field name="harvest" class="java.lang.String"/>
+	<field name="season" class="java.lang.String"/>
+	<field name="commercialDescriptionGoods" class="java.lang.String"/>
+	<field name="countryOfOriginCode" class="java.lang.String"/>
+	<field name="countryOfOriginName" class="java.lang.String"/>
+	<field name="packageMarks" class="java.lang.String"/>
+	<field name="packageName" class="java.lang.String"/>
+	<field name="totalQuantity" class="java.math.BigDecimal"/>
+	<field name="totalNetWeight" class="java.math.BigDecimal"/>
+	<field name="totalGrossWeight" class="java.math.BigDecimal"/>
+	<field name="volume" class="java.math.BigDecimal"/>
+	<field name="totalItems" class="java.lang.Number"/>
+	<field name="batchAndSubBatches" class="java.lang.String"/>
+	<field name="treatmentDuration" class="java.lang.String"/>
+	<field name="observations" class="java.lang.String"/>
+	<field name="treatmentPeriods" class="java.lang.String"/>
+	<field name="disinfectionCertifs" class="java.lang.String"/>
+	<field name="concentrations" class="java.lang.String"/>
+	<field name="treatmentTypes" class="java.lang.String"/>
+	<field name="treatmentDurations" class="java.lang.String"/>
+	<field name="placeOfIssue" class="java.lang.String"/>
+	<field name="expAndRealExp" class="java.lang.String"/>
+	<field name="otReference" class="java.lang.String"/>
+	<field name="totalQForPrint" class="java.math.BigDecimal"/>
+	<field name="botanicalName" class="java.lang.String"/>
+	<field name="ifNewproduct" class="java.lang.Boolean"/>
+	<field name="canDisplay" class="java.lang.Boolean"/>
+	<variable name="CURRENT_DATE" class="java.lang.String"/>
+	<pageHeader>
+		<band height="6"/>
+	</pageHeader>
+	<detail>
+		<band height="824">
+			<rectangle>
+				<reportElement x="1" y="663" width="277" height="64"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="619" width="125" height="43"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="126" y="619" width="152" height="26"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="165" y="573" width="113" height="46"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="537" width="277" height="36"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="573" width="163" height="46"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="522" width="278" height="14"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="279" y="523" width="266" height="204"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="384" width="546" height="55" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="440" width="546" height="82" forecolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="278" y="72" width="268" height="35" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="145" width="278" height="46" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="278" y="0" width="268" height="72" forecolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="278" height="72" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="1" width="150" height="9" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[1. Nom et adresse de l'exportateur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="1" width="120" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="12" width="191" height="11" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="8" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICAT PHYTOSANITAIRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="148" width="150" height="9" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[6. Moyen de transport déclaré]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="278" y="107" width="268" height="38" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="279" y="73" width="266" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[4. de l'Organisme de la Protection des Végétaux de Côte d'Ivoire]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="109" width="262" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[5. Lieu d'origine]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="25" width="71" height="11" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="8" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[N°. RCI/CP/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="493" y="60" width="41" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Original]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="82" width="193" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[à l'Organisme de la Protection des Végétaux de ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="278" y="145" width="268" height="92" forecolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="72" width="278" height="73" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="73" width="180" height="9" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[3. Nom et adresse déclarés du destinataire]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="191" width="278" height="46" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="194" width="193" height="9" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[7. Point d'entrée et destination finale déclarés]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="148" width="178" height="11" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="Serif" size="8" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[REPUBLIQUE DE COTE D'IVOIRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="211" width="233" height="11" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="Serif" size="8" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[SERVICE DE LA PROTECTION DES VEGETAUX]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="237" width="403" height="147" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="403" y="237" width="143" height="147" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="237" width="204" height="9" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[8. Marques des colis ; nombre et nature des colis ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="245" width="204" height="9" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[nom du produit ; nom botanique des plantes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="237" width="136" height="9" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[9. Quantité déclarée]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="257" width="50" height="9" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Poids Net :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="277" width="49" height="9" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Poids Brut :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="296" width="39" height="9" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Volume :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="-7" y="9" width="272" height="54"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{expAndRealExp}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="348" y="26" width="199" height="31"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{phytosanitaryCertificateRef}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-5" y="188" width="270" height="31"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{meansOfTransport}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="331" y="152" width="215" height="34"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{countryOfOriginName}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="462" y="284" width="87" height="17"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{totalNetWeight}==null?"":(new DecimalFormat("#,##0.###",new DecimalFormatSymbols(Locale.FRENCH)).format($F{totalNetWeight})?new DecimalFormat("#,##0.###",new DecimalFormatSymbols(Locale.FRENCH)).format($F{totalNetWeight})+"  kg":"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="463" y="320" width="86" height="17"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{totalGrossWeight}==null?"":(new DecimalFormat("#,##0.###",new DecimalFormatSymbols(Locale.FRENCH)).format($F{totalGrossWeight})?new DecimalFormat("#,##0.###",new DecimalFormatSymbols(Locale.FRENCH)).format($F{totalGrossWeight})+"  kg":"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="463" y="353" width="86" height="17"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{volume}==null?"":(new DecimalFormat("#,##0.###",new DecimalFormatSymbols(Locale.FRENCH)).format($F{volume})?new DecimalFormat("#,##0.###",new DecimalFormatSymbols(Locale.FRENCH)).format($F{volume})+"  m³":"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="334" y="105" width="164" height="17"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{countryOfDestinationName}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="-5" y="92" width="262" height="85"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{consigneeNameAddress}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-5" y="235" width="271" height="17"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{placeOfUnloadingName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-10" y="293" width="443" height="13"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ifNewproduct}==true?($F{packageMarks}+' : '+($F{totalQForPrint}==null?"":(new DecimalFormat("#,###.##",new DecimalFormatSymbols(Locale.FRENCH)).format($F{totalQForPrint})?new DecimalFormat("#,###.##",new DecimalFormatSymbols(Locale.FRENCH)).format($F{totalQForPrint}):""))+' '+$F{packageName}+' DE '+($F{commercialDescriptionGoods}==null?'':$F{commercialDescriptionGoods})):($F{packageMarks}+' : '+$F{totalQForPrint}+' '+$F{packageName}+' DE '+$F{productTypeCode})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="407" y="421" width="97" height="17" forecolor="#000000"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dockingPermissionDate}.toString($P{GenDateFormat})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-9" y="304" width="404" height="96"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{batchAndSubBatches}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-5" y="374" width="390" height="10"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="7" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ifNewproduct}==true?'':$F{productTypeName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-6" y="394" width="398" height="11"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{botanicalName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="442" width="150" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[11. Déclaration supplémentaire]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="666" width="161" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[17. Renseignement complémentaires]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="525" width="215" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Traitement de désinfestation et / ou de désinfection]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="537" width="151" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[12. Traitement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="576" width="151" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[13. Produit chimique (matière active)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="576" width="103" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[14. Durée du traitement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="621" width="103" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[16. Période de traitement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="621" width="104" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[15. Concentration du]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="629" width="53" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[produit utilisé]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="525" width="131" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[18. Lieu de délivrance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="492" width="30" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Cachet]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="564" width="30" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="583" width="91" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Nom et signature du]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="592" width="91" height="9" forecolor="#FFFFFF"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Serif" size="7" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[fonctionnaire autorisé]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-13" y="649" width="274" height="26"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{treatmentTypes}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="-13" y="700" width="188" height="18"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{usedProducts}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="122" y="733" width="167" height="49"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="7" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{isTemporary}==true?'PROTECTION TEMPORAIRE':$F{treatmentPeriods}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="-10" y="749" width="126" height="25"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{concentrations}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement isPrintRepeatedValues="false" x="-16" y="806" width="466" height="9"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="7" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{userReference} +' '+$F{otReference}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="346" y="650" width="130" height="17"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{phytosanitaryCertificateDate}.toString($P{GenDateFormat})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="180" y="513" width="388" height="66"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="9" isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{disinfectionCertifs}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="178" y="698" width="102" height="28"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{isTemporary}==true?'PROTECTION TEMPORAIRE':$F{treatmentDurations}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-5" y="384" width="390" height="10"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="7" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{canDisplay}==true?'':'REC '+$F{harvest}+' CAMP '+$F{season}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="4" y="579" width="529" height="35"/>
+				<textElement lineSpacing="Single">
+					<font size="8" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{observations}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="355" y="618" width="165" height="13"/>
+				<textElement lineSpacing="Single">
+					<font size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{placeOfIssue}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="445" y="467" width="97" height="17" forecolor="#000000"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dockingPermissionDate}.toString($P{GenDateFormat_en})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="12"/>
+	</lastPageFooter>
+</jasperReport>
